@@ -3,92 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Contacto | DataLens Studio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="site-header compact">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a href="index.html" class="logo">
+                <span class="logo-mark" aria-hidden="true">◆</span>
+                DataLens Studio
+            </a>
 
-    <nav class="navbar">
-        <div class="logo">My website</div>
+            <button class="hamburger" id="hamburger-btn" aria-label="Alternar menú de navegación" aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="contact.html" class="nav-cta" aria-current="page">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <ul  class="nav-links" id="nav-links">
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/services.html">Servicios</a></li>
-            <li><a href="/contact.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <main class="page-container form-page">
+        <header class="section-header">
+            <p class="eyebrow">Agenda tu Sesión</p>
+            <h1>Diagnóstico Técnico Inicial</h1>
+            <p class="section-subtitle">Completa el perfil de tu organización para preparar una propuesta de arquitectura y analítica adaptada a tus objetivos.</p>
+        </header>
 
-    <main>
-        <form action="">
+        <form action="#" method="post" id="diagnostic-form" class="diagnostic-form">
             <fieldset>
                 <legend>Formulario de Diagnóstico Inicial</legend>
-                
-                <div>
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" required name="name" minlength="5">
+
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="name">Nombre <span class="required-mark" aria-hidden="true">*</span></label>
+                        <span id="name-hint" class="hint">Mínimo 5 caracteres (nombre y apellido).</span>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            minlength="5"
+                            autocomplete="name"
+                            aria-describedby="name-hint"
+                            aria-errormessage="name-error"
+                        >
+                        <div id="name-error" class="error-msg" aria-live="polite">
+                            <span aria-hidden="true">⚠</span> Ingresa tu nombre completo (al menos 5 caracteres).
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email <span class="required-mark" aria-hidden="true">*</span></label>
+                        <span id="email-hint" class="hint">Formato: nombre@empresa.com</span>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            autocomplete="email"
+                            autocorrect="off"
+                            autocapitalize="off"
+                            spellcheck="false"
+                            aria-describedby="email-hint"
+                            aria-errormessage="email-error"
+                        >
+                        <div id="email-error" class="error-msg" aria-live="polite">
+                            <span aria-hidden="true">⚠</span> Introduce una dirección de correo electrónico válida.
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="empresa">Nombre del negocio <span class="required-mark" aria-hidden="true">*</span></label>
+                        <span id="empresa-hint" class="hint">Razón social o marca comercial.</span>
+                        <input
+                            type="text"
+                            id="empresa"
+                            name="empresa"
+                            required
+                            autocomplete="organization"
+                            aria-describedby="empresa-hint"
+                            aria-errormessage="empresa-error"
+                        >
+                        <div id="empresa-error" class="error-msg" aria-live="polite">
+                            <span aria-hidden="true">⚠</span> Indica el nombre de tu empresa o proyecto.
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="datos">Estado actual de datos</label>
+                        <span id="datos-hint" class="hint">Selecciona el escenario más cercano a tu operación.</span>
+                        <select name="datos" id="datos" aria-describedby="datos-hint">
+                            <option value="hojas_calculo">Solo hojas de cálculo</option>
+                            <option value="bd_basica">Base de datos básica</option>
+                            <option value="sistemas_desarticulados">Múltiples sistemas desarticulados</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" required id="email" name="email" >
+                <div class="field radio-group-field" role="group" aria-labelledby="interes-group-label">
+                    <span id="interes-group-label" class="group-label">Servicio de interés</span>
+                    <div class="radio-cards">
+                        <label for="interes-auditoria" class="radio-card">
+                            <input type="radio" id="interes-auditoria" name="interes" value="auditoria" class="visually-hidden-fallback" checked>
+                            <span>Auditoría &amp; Calidad</span>
+                        </label>
+                        <label for="interes-dash" class="radio-card">
+                            <input type="radio" id="interes-dash" name="interes" value="dash" class="visually-hidden-fallback">
+                            <span>Dashboard BI</span>
+                        </label>
+                        <label for="interes-predictivos" class="radio-card">
+                            <input type="radio" id="interes-predictivos" name="interes" value="predictivos" class="visually-hidden-fallback">
+                            <span>Modelos Predictivos</span>
+                        </label>
+                    </div>
                 </div>
 
-                <div>
-                    <label for="empresa">Nombre del negocio</label>
-                    <input type="text" id="empresa" name="empresa" required>
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="city">Ciudad <span class="required-mark" aria-hidden="true">*</span></label>
+                        <span id="city-hint" class="hint">Ciudad y país de operación principal.</span>
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            required
+                            autocomplete="address-level2"
+                            aria-describedby="city-hint"
+                            aria-errormessage="city-error"
+                        >
+                        <div id="city-error" class="error-msg" aria-live="polite">
+                            <span aria-hidden="true">⚠</span> Por favor, indica tu ciudad.
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="schedule">Horario de atención <span class="required-mark" aria-hidden="true">*</span></label>
+                        <span id="schedule-hint" class="hint">Ej. Lunes a Viernes, 9:00 a 17:00 (GMT-5).</span>
+                        <input
+                            type="text"
+                            id="schedule"
+                            name="schedule"
+                            required
+                            aria-describedby="schedule-hint"
+                            aria-errormessage="schedule-error"
+                        >
+                        <div id="schedule-error" class="error-msg" aria-live="polite">
+                            <span aria-hidden="true">⚠</span> Especifica tu horario de preferencia para contactarte.
+                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <label for="datos">Estado actual de datos</label>
-                    <select name="datos" id="datos" >
-                        <option value="datos">Solo hojas de cálculo</option>
-                        <option value="datos">Base de datos básica</option>
-                        <option value="datos">Múltiples sistemas desarticulados</option>
-                    </select>
+                <div class="field">
+                    <label for="github">GitHub profile <span class="required-mark" aria-hidden="true">*</span></label>
+                    <span id="github-hint" class="hint">URL completa, ej: https://github.com/tu-organizacion</span>
+                    <input
+                        type="url"
+                        id="github"
+                        name="github"
+                        required
+                        autocomplete="url"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                        aria-describedby="github-hint"
+                        aria-errormessage="github-error"
+                    >
+                    <div id="github-error" class="error-msg" aria-live="polite">
+                        <span aria-hidden="true">⚠</span> Introduce una URL válida (incluyendo https://).
+                    </div>
                 </div>
 
-                <label for="interes">Servicio de interés</label>
-                <div>
-                    <label for="interes">Auditoria</label>
-                    <input type="radio" id="interes" name="interes" value="auditoria">
-                    <label for="dash">Dashboard BI</label>
-                    <input type="radio" id="interes" name="interes" value="dash">
-                    <label for="interes">Modelos Predictivos</label>
-                    <input type="radio" id="interes" name="interes" value="predictivos">
-                </div>
-
-                <div>
+                <div class="field">
                     <label for="comentarios">Comentarios adicionales</label>
-                    <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+                    <span id="comentarios-hint" class="hint">Describe brevemente tus fuentes de datos actuales o principales retos operativos.</span>
+                    <textarea name="comentarios" id="comentarios" cols="30" rows="5" aria-describedby="comentarios-hint"></textarea>
                 </div>
 
-                <div>
-                    <label for="city">Cuidad</label>
-                    <input type="text" id="city" name="city" required>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary submit-btn">Guardar y solicitar diagnóstico</button>
                 </div>
-
-                <div>
-                    <label for="schedule">Horario de atencion</label>
-                    <input type="text" id="schdule" name="schedule" required>
-                </div>
-
-                <div>
-                    <label for="github">GitHub profile</label>
-                    <input type="url" required id="github" name="github">
-                </div>
-
-                <button type="submit">Guardar</button>
-
-
             </fieldset>
         </form>
     </main>
-    <script src="/js/burger_menu.js"></script>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p><strong>DataLens Studio</strong> &mdash; Boutique de Consultoría en Analítica y Soluciones de Datos.</p>
+            <p class="footer-meta">&copy; 2026 DataLens Studio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/burger_menu.js"></script>
 </body>
 </html>
