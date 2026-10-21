@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <main>
+        <form action="">
+            <fieldset>
+                <legend>Formulario de Diagnóstico Inicial</legend>
+                
+                <div>
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" required name="name" minlength="5">
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" required id="email" name="email" >
+                </div>
+
+                <div>
+                    <label for="empresa">Nombre del negocio</label>
+                    <input type="text" id="empresa" name="empresa" required>
+                </div>
+
+                <div>
+                    <label for="datos">Estado actual de datos</label>
+                    <select name="datos" id="datos" >
+                        <option value="datos">Solo hojas de cálculo</option>
+                        <option value="datos">Base de datos básica</option>
+                        <option value="datos">Múltiples sistemas desarticulados</option>
+                    </select>
+                </div>
+
+                <label for="interes">Servicio de interés</label>
+                <div>
+                    <label for="interes">Auditoria</label>
+                    <input type="radio" id="interes" name="interes" value="auditoria">
+                    <label for="dash">Dashboard BI</label>
+                    <input type="radio" id="interes" name="interes" value="dash">
+                    <label for="interes">Modelos Predictivos</label>
+                    <input type="radio" id="interes" name="interes" value="predictivos">
+                </div>
+
+                <div>
+                    <label for="comentarios">Comentarios adicionales</label>
+                    <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+                </div>
+
+                <div>
+                    <label for="city">Cuidad</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+
+                <div>
+                    <label for="schedule">Horario de atencion</label>
+                    <input type="text" id="schdule" name="schedule" required>
+                </div>
+
+                <div>
+                    <label for="github">GitHub profile</label>
+                    <input type="url" required id="github" name="github">
+                </div>
+
+                <button type="submit">Guardar</button>
+
+
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
