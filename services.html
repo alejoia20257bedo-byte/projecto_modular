@@ -3,53 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios | DataLens Studio</title>
+    <title>DataLens Studio | Servicios</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="site-header compact">
-        <nav class="navbar" aria-label="Navegación principal">
-            <a href="index.html" class="logo">
-                <span class="logo-mark" aria-hidden="true">◆</span>
-                DataLens Studio
-            </a>
+    <nav class="navbar">
+        <div class="logo">DataLens Studio</div>
 
-            <button class="hamburger" id="hamburger-btn" aria-label="Alternar menú de navegación" aria-expanded="false" aria-controls="nav-links">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="services.html" aria-current="page">Servicios</a></li>
-                <li><a href="contact.html" class="nav-cta">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="services.html">Servicios</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+    </nav>
 
-    <main class="page-container">
-        <header class="section-header">
-            <p class="eyebrow">Soluciones a Medida</p>
-            <h1>Servicios</h1>
-            <p class="section-subtitle">Programas estructurados para llevar la madurez analítica de tu empresa desde la limpieza inicial hasta la predicción avanzada.</p>
-        </header>
-
-        <div tabindex="0" role="region" aria-labelledby="services-table-caption" class="table-wrapper">
+    <main>
+        <h1>Servicios</h1>
+        <div class="table-container">
             <table>
-                <caption id="services-table-caption">Comparativa de planes de consultoría, entregables clave, tiempos de implementación y niveles de inversión</caption>
                 <thead>
                     <tr>
-                        <th scope="col">Servicio</th>
-                        <th scope="col">Enfoque / Audiencia</th>
-                        <th scope="col">Entregables Clave</th>
-                        <th scope="col">Tiempo Estimado</th>
-                        <th scope="col">Nivel de Inversión</th>
+                        <th>Servicio</th>
+                        <th>Enfoque / Audiencia</th>
+                        <th>Entregables Clave</th>
+                        <th>Tiempo Estimado</th>
+                        <th>Nivel de Inversión</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">Auditoría &amp; Calidad de Datos (Data Hygiene)</th>
+                        <td>Auditoría &amp; Calidad de Datos (Data Hygiene)</td>
                         <td>Empresas con datos dispersos en hojas de cálculo y silos manuales.</td>
                         <td>
                             <ul>
@@ -58,11 +47,11 @@
                                 <li>Modelo relacional documentado</li>
                             </ul>
                         </td>
-                        <td><span class="time-pill">1 a 2 semanas</span></td>
-                        <td><span class="tier-badge tier-base">Base</span></td>
+                        <td>1 a 2 semanas</td>
+                        <td>Base</td>
                     </tr>
                     <tr>
-                        <th scope="row">Dashboards &amp; Automatización (BI Core)</th>
+                        <td>Dashboards &amp; Automatización (BI Core)</td>
                         <td>Líderes de área que necesitan métricas actualizadas sin reportes manuales.</td>
                         <td>
                             <ul>
@@ -71,11 +60,11 @@
                                 <li>Capacitación al equipo directivo</li>
                             </ul>
                         </td>
-                        <td><span class="time-pill">3 a 4 semanas</span></td>
-                        <td><span class="tier-badge tier-mid">Intermedio</span></td>
+                        <td>3 a 4 semanas</td>
+                        <td>Intermedio</td>
                     </tr>
                     <tr>
-                        <th scope="row">Modelos Predictivos &amp; Clientes (Advanced Insights)</th>
+                        <td>Modelos Predictivos &amp; Clientes (Advanced Insights)</td>
                         <td>Negocios con volumen transaccional que buscan reducir bajas y fidelizar.</td>
                         <td>
                             <ul>
@@ -84,8 +73,8 @@
                                 <li>Reporte de acciones estratégicas</li>
                             </ul>
                         </td>
-                        <td><span class="time-pill">4 a 6 semanas</span></td>
-                        <td><span class="tier-badge tier-adv">Avanzado</span></td>
+                        <td>4 a 6 semanas</td>
+                        <td>Avanzado</td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -98,11 +87,9 @@
     </main>
 
     <footer class="site-footer">
-        <div class="footer-inner">
-            <p><strong>DataLens Studio</strong> &mdash; Boutique de Consultoría en Analítica y Soluciones de Datos.</p>
-            <p class="footer-meta">&copy; 2026 DataLens Studio. Todos los derechos reservados.</p>
-        </div>
+        <p>&copy; 2026 DataLens Studio. Todos los derechos reservados.</p>
     </footer>
-    <script src="js/burger_menu.js"></script>
+
+    <script src="js/functions.js"></script>
 </body>
 </html>
